@@ -17,7 +17,7 @@ public class HomeController {
 	@GetMapping("/")
 	public String home() { return "home"; }
 	
-	@GetMapping("/weather")
+	@GetMapping(value="/weather", produces="application/json;charset=utf-8")
 	@ResponseBody
 	public String weather() throws Exception {
 		String json = ws.getWeatherJSON();
